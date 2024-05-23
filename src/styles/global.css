@@ -1,84 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-@import './scale.css';
-@import './components/iu/';
+@import "./scale.css";
+@import "./components/iu/";
+@import "./components/organins/";
+@import "./components/molecules/";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  font-family:  "Lato", sans-serif;
-  background:#0f2c4491;
+  font-family: "Lato", sans-serif;
 }
 
 html {
-    font-size: 62.5%;
-  }
-  
-  select,
-  textarea {
-    @apply w-full border-none bg-none;
-  
-    &:focus {
-      @apply outline-none;
-    }
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .main-page {
-    animation-name: fadeIn;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in;
-    background-image: var(--bg-img);
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
- 
+  font-size: 62.5%;
+}
 
+select,
+textarea {
+  @apply w-full border-none bg-none;
 
-  .container-prin {
-    @apply px-[2rem] fixed w-full z-[100] ;
-    @screen laptop {
-      padding-right: calc(10rem * var(--scale));
-      padding-left: calc(10rem * var(--scale));
-    }
+  &:focus {
+    @apply outline-none;
   }
+}
 
+textarea {
+  resize: none;
+}
 
+.main-page {
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+  background-image: var(--bg-img);
+}
 
-  h1{
-    @screen laptop{
-      @apply font-bold leading-[7.68rem];
-      font-size: calc(6rem * var(--scale));
-      line-height:calc(7.68rem * var(--scale));
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-
-
-  h2{
-    @screen laptop{
-      @apply font-medium leading-[4.8rem];
-      font-size: calc(4rem * var(--scale));
-      line-height:calc(4.8rem * var(--scale));
-    }
+  100% {
+    opacity: 1;
   }
+}
 
-  h3{
-    @screen laptop{
-      @apply font-semibold;
-      font-size: calc(2rem * var(--scale));
-      line-height:calc(2.4rem * var(--scale));
-    }
+.container-prin {
+  @apply px-[2rem] fixed w-full z-[100];
+  @screen laptop {
+    padding-right: calc(10rem * var(--scale));
+    padding-left: calc(10rem * var(--scale));
   }
+}
+
+.container-components {
+  @apply px-[2rem] w-full h-auto  pt-[9rem];
+  @screen laptop {
+    padding-right: calc(10rem * var(--scale));
+    padding-left: calc(10rem * var(--scale));
+  }
+}
+
+h1 {
+  @screen laptop {
+    @apply font-bold leading-[7.68rem];
+    font-size: calc(6rem * var(--scale));
+    line-height: calc(7.68rem * var(--scale));
+  }
+}
+
+h2 {
+  @screen laptop {
+    @apply font-medium leading-[4.8rem];
+    font-size: calc(4rem * var(--scale));
+    line-height: calc(4.8rem * var(--scale));
+  }
+}
+
+h3 {
+  @screen laptop {
+    @apply font-semibold;
+    font-size: calc(2rem * var(--scale));
+    line-height: calc(2.4rem * var(--scale));
+  }
+}
+
+h4 {
+  @screen laptop {
+    @apply font-semibold;
+    font-size: calc(3.4rem * var(--scale));
+    line-height: calc(4.32rem * var(--scale));
+  }
+}

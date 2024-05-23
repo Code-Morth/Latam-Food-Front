@@ -1,0 +1,6 @@
+.card_menu_initial{
+    @apply flex flex-col gap-[1rem] w-[30.6rem] h-[37rem] pb-[1rem]  rounded-2xl;
+    & img {
+        @apply w-full h-[19.4rem] ;
+    }
+}

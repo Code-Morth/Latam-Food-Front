@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "titleColor" : "#F78E1E",
+        "hoverTitleColor" : "#805b34"
+      }
+    },
     screens: {
       phone: '414px',
       phonelg: '568px',

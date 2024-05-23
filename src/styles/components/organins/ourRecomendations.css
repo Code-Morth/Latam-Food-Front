@@ -1,0 +1,6 @@
+.box_Our_recomendations{
+    @apply w-full h-auto flex flex-col gap-[3rem] items-center;
+    & h4 {
+        @apply text-black ;
+    }
+}

@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import './scale.css';
+@import './components/iu/';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  font-family:  "Lato", sans-serif;
+  background:#0f2c4491;
+}
 
 html {
     font-size: 62.5%;
@@ -35,8 +45,40 @@ html {
       opacity: 1;
     }
   }
-  body {
-    font-family: "Black Ops One", system-ui;
-    background:#0f2c4491;
+ 
+
+
+  .container-prin {
+    @apply px-[2rem] fixed w-full z-[100] ;
+    @screen laptop {
+      padding-right: calc(10rem * var(--scale));
+      padding-left: calc(10rem * var(--scale));
+    }
   }
 
+
+
+  h1{
+    @screen laptop{
+      @apply font-bold leading-[7.68rem];
+      font-size: calc(6rem * var(--scale));
+      line-height:calc(7.68rem * var(--scale));
+    }
+  }
+
+
+  h2{
+    @screen laptop{
+      @apply font-medium leading-[4.8rem];
+      font-size: calc(4rem * var(--scale));
+      line-height:calc(4.8rem * var(--scale));
+    }
+  }
+
+  h3{
+    @screen laptop{
+      @apply font-semibold;
+      font-size: calc(2rem * var(--scale));
+      line-height:calc(2.4rem * var(--scale));
+    }
+  }

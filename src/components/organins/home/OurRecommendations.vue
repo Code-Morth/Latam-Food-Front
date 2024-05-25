@@ -35,7 +35,7 @@ const platos = [
 </script>
 
 <template>
-  <div class="box_Our_recomendations !mt-[-5rem] pb-[2rem]">
+  <section class="box_Our_recomendations !mt-[-5rem] pb-[2rem]">
     <h4>Nuestras recomendaciones</h4>
     <div class="flex  py-[1rem] gap-[5rem] w-full justify-center">
       <div v-for="menu in platos" :key="menu.id" >
@@ -43,5 +43,5 @@ const platos = [
       </div>
     </div>
     <ButtonsGlobal class="w-[19rem] h-[6rem] text-[white] text-[2.6rem] font-bold">Ver Todos</ButtonsGlobal>
-  </div>
+  </section>
 </template>

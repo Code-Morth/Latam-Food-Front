@@ -9,8 +9,7 @@ import OurRecommendations from "../../components/organins/home/OurRecommendation
   <div class="w-full h-auto main-page">
     <InformativeHome />
     <ContainerComponents> 
-        <OurRecommendations/>
-        
+        <OurRecommendations/>        
     </ContainerComponents>
   </div>
 </template>

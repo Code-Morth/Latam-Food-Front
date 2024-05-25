@@ -1,6 +1,37 @@
-.card_menu_initial{
-    @apply flex flex-col gap-[1rem] w-[30.6rem] h-[37rem] pb-[1rem]  rounded-2xl;
-    & img {
-        @apply w-full h-[19.4rem] ;
-    }
+.card-menu-initial {
+  @apply flex flex-col pb-[1rem] shadow-[0px_0px_5px_#524f4f] rounded-2xl;
+
+  width: calc(30.6rem *var(--scale));
+  height: calc(37rem *var(--scale));
+  gap: calc(1rem *var(--scale));
+  padding-bottom: calc(1rem *var(--scale));
+
+
+  & img {
+    @apply w-full h-[19.4rem] rounded-t-2xl object-cover;
+  }
+
+  .info-container {
+    @apply px-[2rem] flex flex-col justify-around h-full;
+  }
+
+  .info-header {
+    @apply flex justify-between;
+  }
+
+  p {
+    @apply text-[1.6rem] text-[#515151] leading-[1.92rem] font-normal;
+  }
+
+  .button-container {
+    @apply flex justify-between;
+  }
+
+  .comprar {
+    @apply w-[9.6rem] h-[4rem] text-[white] text-[1.6rem] font-bold;
+  }
+
+  .carro {
+    @apply !bg-transparent border-2 border-titleColor  h-[4rem] text-titleColor  text-[1.6rem] font-bold;
+  }
 }

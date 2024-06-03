@@ -4,6 +4,7 @@
 @import "./components/iu/";
 @import "./components/organins/";
 @import "./components/molecules/";
+@import "./pages/";
 
 @tailwind base;
 @tailwind components;

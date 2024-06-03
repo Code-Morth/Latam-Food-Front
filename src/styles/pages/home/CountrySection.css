@@ -1,0 +1,29 @@
+.CountrySection {
+  @apply flex justify-center items-center w-full mt-[17rem];
+
+  .country-section-container {
+    @apply flex flex-col gap-[4rem] justify-center items-center;
+  }
+
+  .flags-container {
+    @apply flex justify-around items-center w-full border-[0.15rem] border-[#2F695C] rounded-[2rem] p-[6rem];
+  }
+
+  .flag-text-container {
+    @apply flex flex-col justify-center items-center gap-[1.5rem];
+
+    h2 {
+      @apply text-[2.4rem] font-semibold;
+    }
+
+    p {
+      @apply w-[45%] text-center text-[1.6rem];
+    }
+  }
+
+  .saber-mas{
+
+    @apply text-[2.4rem] text-[white] ;
+
+  }
+}

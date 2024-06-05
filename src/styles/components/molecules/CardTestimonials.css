@@ -1,0 +1,44 @@
+.CardTestimonials{
+
+    @apply w-full flex justify-center items-center;
+
+    .card-testimonials-container{
+
+        @apply w-[27rem] h-auto flex flex-col justify-between items-center gap-[1rem] p-[1.5rem] border-[0.2rem] border-[#2F695C] rounded-[1rem];
+
+    }
+
+    .perfil-image-container{
+
+        @apply w-[9rem] h-auto ;
+
+    }
+
+    .stars-container{
+
+        @apply flex  ;
+
+    }
+
+    .star-image-container{
+
+        @apply w-[2rem] h-auto ;
+
+    }
+
+    h1{
+
+        @apply text-[#2F695C] text-[2rem] ;
+
+
+        line-height: 3rem;
+    }
+
+    p{
+
+        @apply text-[1.6rem] w-fit text-center font-normal;
+
+    }
+
+
+}

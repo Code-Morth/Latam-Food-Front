@@ -23,10 +23,17 @@
 }
 
 .navbar_link {
-  @apply flex gap-[5rem];
+  @apply flex gap-[5rem] ;
   @screen laptop {
     gap: calc(5rem * var(--scale));
   }
+   & a {
+    @screen laptop {
+      @apply font-semibold;
+      font-size: calc(2rem * var(--scale));
+      line-height: calc(2.4rem * var(--scale));
+    }
+   }
 }
 
 .navbar_icons_ {

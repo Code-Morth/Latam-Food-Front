@@ -8,9 +8,9 @@ import ContainerGlobal from "../global/ContainerGlobal.vue";
       <h2 class="logo_navbar">logo</h2>
       <nav class="container_section ">
         <div class="navbar_link">
-          <h3>Inicio</h3>
-          <h3>Menú</h3>
-          <h3>Contacto</h3>
+          <router-link to="/">Inicio</router-link>
+          <router-link to="/Menu">Menú</router-link>
+          <router-link to="/Contacto">Contacto</router-link>
         </div>
 
         <div class="navbar_icons_">

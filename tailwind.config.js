@@ -9,6 +9,12 @@ export default {
       colors: {
         "titleColor" : "#F78E1E",
         "hoverTitleColor" : "#805b34"
+      },
+      gridTemplateColumns: {
+        // config-auto-mi-grid
+        'auto': 'repeat(auto-fill, minmax(28rem, 1fr))',
+
+        
       }
     },
     screens: {

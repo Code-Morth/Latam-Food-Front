@@ -27,33 +27,46 @@
 
 <style lang="postcss" scoped>
 .box_Menu_home{
-    @apply w-full h-auto flex flex-col justify-center items-center gap-[1.5rem];
+    @apply py-[4rem] w-full h-auto flex flex-col justify-center items-center gap-[1.5rem];
 @screen laptop{
-    @apply text-[black]
+    @apply text-[black] ;
+    gap: calc(2rem * var(--scale));
+    padding-top: calc(6rem * var(--scale));
+    padding-bottom: calc(6rem * var(--scale));
 }
  & h1 {
     @apply text-[black] font-extrabold text-[2rem] ;
     @screen tablet{
-        @apply text-[4rem]
+        @apply text-[4rem];
+    }
+    @screen laptop{
+        font-size: calc(8rem * var(--scale));
     }
  }
  & p {
-    @apply text-[#4E4E4E] font-medium text-[1.2rem];
+    @apply text-[#C4C4C4] font-medium text-[1.2rem];
     @screen tablet{
         @apply text-[1.5rem]  ;
+    }
+    @screen laptop{
+        font-size: calc(2.5rem * var(--scale));
     }
  }
 
  .box_menu_all{
-    @apply  w-[70%] flex justify-center  ;
+    @apply  w-[95%] flex justify-center  ;
     @screen tablet{
-        @apply w-[50%] ;
+        @apply w-[57%] ;
     }
 
      .inputs_main{
-        @apply  w-[100%] px-[2rem]  py-[1rem] font-semibold text-[1rem]  shadow-[1px_1px_3px_#ECECEC] rounded-md;
+        @apply  w-[100%] px-[2rem] outline-none text-[#C4C4C4]  py-[1rem] font-semibold text-[1rem]  shadow-[0px_0px_10px_#ECECEC] rounded-lg;
         @screen tablet{
             @apply py-[1.5rem]  text-[1.5rem] ;
+        }
+        @screen laptop{
+            padding-top: calc(2rem * var(--scale));
+            padding-bottom:  calc(2rem * var(--scale));
         }
         
      }
@@ -75,6 +88,24 @@
 
  
 
+ .box_menu_btns{
+    @apply flex  w-[95%] justify-around py-[1rem];
+    @screen tablet{
+        @apply   w-[60%];
+    }
+   
+    & button {
+        @apply border-2 border-[#F78E1E] rounded-lg px-[.7rem] py-[.4rem] text-[#F78E1E] text-[1.2rem] font-bold;
+        @screen tablet{
+            @apply  text-[1.8rem];
+        }
+        @screen laptop{
+            font-size: calc(2.2rem * var(--scale));
+            padding-left: calc(2.2rem * var(--scale));
+            padding-right: calc(2.2rem * var(--scale))
+        }
+    }
+ }
 
 
 }

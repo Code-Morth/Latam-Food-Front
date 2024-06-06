@@ -1,5 +1,23 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import ContainerGlobal from "../global/ContainerGlobal.vue";
+import Login from '../global/modals/Login.vue';
+
+const visible = ref(false);
+
+const closeModal = () => {
+
+  visible.value = false
+
+}
+
+const openModal = () =>{
+
+  visible.value = true
+  console.log("visible.value",visible.value)
+
+}
+
 </script>
 
 <template>
@@ -14,19 +32,12 @@ import ContainerGlobal from "../global/ContainerGlobal.vue";
         </div>
 
         <div class="navbar_icons_">
-          <img
-            class="navbar_icon"
-            src="/components/ui/userIcon.png"
-            alt="userIcono"
-          />
-          <img
-            class="navbar_icon"
-            src="/components/ui/cardIcon.png"
-            alt="cardIcono"
-          />
+          <img @click="openModal" class="navbar_icon" src="/components/ui/userIcon.png" alt="userIcono" />
+          <img class="navbar_icon" src="/components/ui/cardIcon.png" alt="cardIcono" />
         </div>
       </nav>
     </div>
+    <!-- <Login/> -->
   </ContainerGlobal>
 </template>
 

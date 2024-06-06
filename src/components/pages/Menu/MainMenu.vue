@@ -34,8 +34,12 @@
     padding-top: calc(6rem * var(--scale));
     padding-bottom: calc(6rem * var(--scale));
 }
+
+::placeholder{
+    @apply text-[#CED4D9]; 
+}
  & h1 {
-    @apply text-[black] font-extrabold text-[2rem] ;
+    @apply text-[black] font-extrabold text-[3rem] ;
     @screen tablet{
         @apply text-[4rem];
     }

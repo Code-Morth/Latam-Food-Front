@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily :{
+        "logo" : [ "Leckerli One", "cursive2" ]
+      },
+
       colors: {
         "titleColor" : "#F78E1E",
         "hoverTitleColor" : "#805b34"

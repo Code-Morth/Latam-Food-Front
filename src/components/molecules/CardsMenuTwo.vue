@@ -13,7 +13,7 @@ defineProps({
 
 <template>
     <div class='card_box_content_main_'>
-        <img class="absolute top-[-1rem] -rotate-12 left-[-1.2rem]" src="/components/molecules/pais.png" alt="bandera">
+        <img class="absolute top-[-1rem] -rotate-12 left-[-1.2rem]" :src="menu?.logo" alt="bandera">
         <img :src='menu?.foto' alt="menu">
         <section class='info_box_main_card'>
             <article class='box_price_name'>

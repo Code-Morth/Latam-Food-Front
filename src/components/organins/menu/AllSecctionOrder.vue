@@ -308,7 +308,7 @@ console.log("aqui mapeando",platos?.Argentina)
    </div>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 
 .box_all_order_good{
     @apply flex flex-col  gap-[2rem] py-[3rem] ;
@@ -330,7 +330,9 @@ console.log("aqui mapeando",platos?.Argentina)
            @apply text-[2.5rem];
         }
         @screen laptop{
-            @apply text-[3.5rem];
+
+            font-size: calc(3.5rem * var(--scale));
+
          }
     }
 

@@ -90,18 +90,20 @@ const createUser = (data: any) => {
 
   @apply flex flex-col gap-[1rem] justify-center items-center p-[2rem];
 
-  @screen laptop{
+  @screen laptop {
 
-    @apply flex flex-col gap-[2rem] justify-center items-center p-[2rem];
+    @apply flex flex-col justify-center items-center;
 
+    gap: calc(2rem *var(--scale));
+    padding: calc(2rem *var(--scale));
 
   }
 
 }
 
-h3{
+h3 {
 
-  @apply text-[2rem] ;
+  @apply text-[2rem];
 
 }
 
@@ -109,9 +111,11 @@ h2 {
 
   @apply text-[#2F695C] font-bold text-[2.6rem];
 
-  @screen laptop{
+  @screen laptop {
 
-    @apply text-[#2F695C] font-bold text-[3.6rem];
+    @apply text-[#2F695C] font-bold ;
+
+    font-size: calc(3.6rem *var(--scale));
 
 
   }
@@ -135,7 +139,7 @@ input {
 
   @apply border-[0.1rem] border-[black] px-[1rem] p-[0.7rem] rounded-[0.4rem];
 
-  @screen laptop{
+  @screen laptop {
 
     @apply border-[0.1rem] border-[black] p-[1rem] rounded-[0.4rem];
 
@@ -166,9 +170,11 @@ input {
 
   @apply w-full bg-[#F7A043] border-[0.1rem] p-[0.6rem] rounded-[0.5rem] text-[1.4rem] text-[white];
 
-  @screen laptop{
+  @screen laptop {
 
-    @apply w-full bg-[#F7A043] border-[0.1rem] p-[0.9rem] rounded-[0.5rem] text-[1.6rem] text-[white];
+    @apply w-full bg-[#F7A043] border-[0.1rem] rounded-[0.5rem] text-[1.6rem] text-[white];
+
+    padding:calc(0.9rem *var(--scale));
 
 
   }
@@ -179,10 +185,12 @@ input {
 
   @apply p-[0.6rem] border-[#D0D5DD] border-[0.1rem] flex w-full justify-center rounded-[0.5rem] text-[1.4rem] gap-[1rem];
 
-  @screen laptop{
+  @screen laptop {
 
-    @apply p-[0.9rem] border-[#D0D5DD] border-[0.1rem] flex w-full justify-center rounded-[0.5rem] text-[1.6rem] gap-[1rem];
+    @apply p-[0.9rem] border-[#D0D5DD] border-[0.1rem] flex w-full justify-center rounded-[0.5rem];
 
+    font-size:calc(1.6rem *var(--scale));
+    gap:calc(1rem *var(--scale));
 
   }
 

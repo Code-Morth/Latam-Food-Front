@@ -22,8 +22,7 @@ defineProps({
       <p>{{ menu?.description }}</p>
       <div class="button-container">
         <ButtonsGlobal class="comprar">Comprar</ButtonsGlobal>
-        <ButtonsGlobal class="carro">Añadir
-          al carro</ButtonsGlobal>
+        <ButtonsGlobal class="carro">Añadir al carro</ButtonsGlobal>
       </div>
     </div>
   </div>
@@ -32,14 +31,14 @@ defineProps({
 <style scoped lang='postcss'>
 .card-menu-initial {
 
-  @apply flex flex-col pb-[1rem] shadow-[0px_0px_5px_#524f4f] rounded-2xl;
+  @apply flex flex-col pb-[2rem] shadow-[0px_0px_5px_#524f4f] gap-[1rem] rounded-2xl;
 
-  @screen laptop{
-    
+  @screen laptop {
+
     @apply flex flex-col pb-[1rem] shadow-[0px_0px_5px_#524f4f] rounded-2xl;
 
     width: calc(30.6rem *var(--scale));
-    height: calc(37rem *var(--scale));
+    height: auto;
     gap: calc(1rem *var(--scale));
     padding-bottom: calc(1rem *var(--scale));
 
@@ -47,11 +46,28 @@ defineProps({
 
 
   & img {
-    @apply w-full h-[19.4rem] rounded-t-2xl object-cover;
+    @apply w-full rounded-t-2xl object-cover;
+
+    @screen laptop {
+
+      height: calc(19.4rem *var(--scale));
+
+    }
+
   }
 
   .info-container {
-    @apply px-[2rem] flex flex-col justify-around h-full;
+    @apply px-[2rem] flex flex-col justify-around h-full gap-[1.5rem];
+
+    @screen laptop {
+
+      @apply flex flex-col justify-around h-full;
+
+      padding-left: calc(2rem *var(--scale));
+      padding-rigth: calc(2rem *var(--scale));
+
+    }
+
   }
 
   .info-header {
@@ -63,9 +79,9 @@ defineProps({
   }
 
   .button-container {
-    @apply flex justify-between;
+    @apply flex justify-between gap-[2rem];
 
-    @screen laptop{
+    @screen laptop {
 
       @apply flex justify-between;
 
@@ -76,29 +92,39 @@ defineProps({
   .comprar {
     @apply w-full h-[4rem] text-[white] text-[1.4rem] font-bold;
 
-    @screen laptop{
+    @screen laptop {
 
-      @apply w-[9.6rem] h-[4rem] text-[white] text-[1.6rem] font-bold;
+      @apply text-[white] flex justify-center items-center font-bold;
+
+      width: calc(9.6rem *var(--scale));
+      height: calc(4rem *var(--scale));
+      font-size: calc(1.6rem *var(--scale));
 
     }
 
   }
 
   .carro {
-    @apply !bg-transparent  border-2 border-titleColor w-full h-[4rem] text-titleColor text-[1.4rem] font-bold;
+    @apply !bg-transparent border-2 border-titleColor w-full h-[4rem] text-titleColor text-[1.3rem] font-bold;
 
-    @screen laptop{
+    @screen laptop {
 
-      @apply !bg-transparent border-2 border-titleColor h-[4rem] text-titleColor text-[1.6rem] font-bold;
+      @apply !bg-transparent flex justify-center items-center border-2 border-titleColor text-titleColor font-bold;
+
+      font-size: calc(1.5rem *var(--scale));
+      height: calc(4rem *var(--scale));
+      line-height:calc(1.5rem *var(--scale));
+
+
 
 
     }
 
   }
 
-  h3{
+  h3 {
 
-    @apply text-[1.8rem] font-bold ;
+    @apply text-[1.8rem] font-bold;
 
   }
 }

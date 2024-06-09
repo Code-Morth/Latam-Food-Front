@@ -44,11 +44,20 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
 <style scoped>
 .CountrySection {
-    @apply flex justify-center items-center w-full mt-[7rem];
+    @apply flex justify-center items-center w-full mt-[2rem];
 
     @screen laptop{
 
-        @apply flex justify-center items-center w-full mt-[17rem];
+        @apply flex justify-center items-center w-full mt-[7rem];
+
+
+    }
+
+    @screen laptop{
+
+        @apply flex justify-center items-center w-full;
+
+        margin-top:calc(17rem *var(--scale));
 
 
     }
@@ -68,7 +77,10 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
         @screen laptop{
 
-            @apply flex justify-around items-center w-full border-[0.15rem] border-[#2F695C] rounded-[2rem] p-[6rem];
+            @apply flex flex-row justify-around items-center w-full border-[0.15rem] border-[#2F695C] rounded-[2rem];
+
+            padding:calc(6rem *var(--scale));
+
 
 
         }
@@ -87,7 +99,10 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
             @screen laptop{
 
-                @apply w-[45%] text-center text-[1.6rem];
+                @apply w-[45%] text-center ;
+
+                font-size:calc(1.6rem *var(--scale));
+
 
 
             }
@@ -97,7 +112,17 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
     .saber-mas {
 
-        @apply text-[2.4rem] text-[white];
+        @apply text-[1.7rem] w-fit h-fit p-[1rem] px-[3rem] text-[white] font-semibold;
+
+        @screen laptop{
+
+            @apply  text-[white];
+
+            font-size:calc(2.4rem *var(--scale));
+
+
+
+        }
 
     }
 }

@@ -31,7 +31,14 @@ import CardTestimonials from '../../molecules/CardTestimonials.vue';
 
 <style scoped>
 .NewDisheAndPeople {
-    @apply w-full flex justify-center items-center mt-[10rem];
+    @apply w-full flex justify-center items-center mt-[5rem];
+
+    @screen laptop{
+
+        @apply w-full flex justify-center items-center mt-[10rem];
+
+
+    }
 
     .new-dishes-and-people-container {
         @apply w-full flex flex-col justify-center items-center;
@@ -57,7 +64,9 @@ import CardTestimonials from '../../molecules/CardTestimonials.vue';
 
         @screen laptop{
 
-            @apply text-[4.8rem] text-[#FFFFFF] font-semibold;
+            @apply text-[#FFFFFF] font-semibold;
+
+            font-size:calc(4.8rem *var(--scale));
 
 
         }
@@ -70,7 +79,10 @@ import CardTestimonials from '../../molecules/CardTestimonials.vue';
 
         @screen laptop{
 
-            @apply flex flex-col justify-center items-center gap-[1rem] mt-[15rem];
+            @apply flex justify-center items-center ;
+
+            margin-top:calc(15rem *var(--scale));
+            gap:calc(1rem *var(--scale));
 
 
         }
@@ -83,7 +95,9 @@ import CardTestimonials from '../../molecules/CardTestimonials.vue';
 
         @screen laptop{
 
-            @apply flex gap-[2rem];
+            @apply flex flex-row gap-[2rem];
+
+            gap:calc(2rem *var(--scale));
 
         }
 
@@ -95,7 +109,9 @@ import CardTestimonials from '../../molecules/CardTestimonials.vue';
 
         @screen laptop{
 
-            @apply text-[4.3rem] font-semibold;
+            @apply  font-semibold;
+
+            font-size:calc(4.3rem *var(--scale));
 
         }
 

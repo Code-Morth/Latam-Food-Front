@@ -110,7 +110,9 @@ h2{
 
     @screen laptop{
 
-        @apply text-[2.4rem] font-semibold w-full;
+        @apply  font-semibold w-full;
+
+        font-size:calc(2.4rem *var(--scale));
 
     }
 

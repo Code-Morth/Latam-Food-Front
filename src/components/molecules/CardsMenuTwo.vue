@@ -32,7 +32,7 @@ defineProps({
 
 
 
-<style lang="postcss" scoped>
+<style scoped>
 .card_box_content_main_ {
     @apply relative w-[30.6rem] h-[42rem] flex flex-col  rounded-[2rem] shadow-[0px_0px_10px_#E2E2E2] ;
     .info_box_main_card {

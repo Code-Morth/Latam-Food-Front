@@ -42,7 +42,7 @@ const platos = [
         <CardMenu :menu="menu" />
       </div>
     </div>
-    <ButtonsGlobal class="w-[19rem] h-[6rem] text-[white] text-[2.6rem] font-bold">Ver Todos</ButtonsGlobal>
+    <ButtonsGlobal class="ver-todos">Ver Todos</ButtonsGlobal>
   </section>
 </template>
 
@@ -53,7 +53,9 @@ const platos = [
 
   @screen laptop {
 
-    @apply w-full h-auto flex flex-col gap-[3rem] items-center;
+    @apply w-full h-auto flex flex-col items-center;
+
+    gap:calc(3rem *var(--scale));
 
 
   }
@@ -63,7 +65,9 @@ const platos = [
 
     @screen laptop{
 
-      @apply text-black text-[2rem];
+      @apply text-black;
+
+      font-size:calc(2rem *var(--scale));
 
     }
 
@@ -79,9 +83,29 @@ const platos = [
 
       @apply flex flex-row py-[1rem] gap-[5rem] w-full justify-center;
 
+      padding-left:calc(1rem *var(--scale));
+      padding-rigth:calc(1rem *var(--scale));
+      gap:calc(5rem *var(--scale));
+
 
     }
 
+
+  }
+
+  .ver-todos{
+
+    @apply w-fit h-fit text-[white] text-[1.5rem] p-[1rem] px-[3rem] flex flex-col justify-center items-center font-bold ;
+
+    @screen laptop{
+
+      @apply  text-[white]  font-bold ;
+
+      font-size:calc(2.6rem *var(--scale));
+      height:calc(6rem *var(--scale));
+      width:calc(19rem *var(--scale));
+
+    }
 
   }
 

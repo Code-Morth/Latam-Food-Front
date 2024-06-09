@@ -26,19 +26,37 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 .box_initial_Home_informati {
     @apply pt-[9rem] flex bg-cover bg-no-repeat bg-[url("/components/molecules/fondoHome.jpg")];
 
-    h1 {
-
-        @apply text-[2.7rem] font-bold;
-
-    }
-
-    
-
     @screen laptop {
 
-        @apply pt-[9rem] flex h-[80rem] bg-cover bg-no-repeat bg-[url("/components/molecules/fondoHome.jpg")];
+        @apply bg-cover bg-no-repeat bg-[url("/components/molecules/fondoHome.jpg")];
+
+        padding-top: calc(9rem * var(--scale));
+        height: calc(80rem * var(--scale));
 
     }
+
+    h1 {
+
+        @apply text-[2rem] font-bold;
+
+        @screen laptop{
+
+            @apply  font-bold;
+
+            font-size: calc(4.7rem *var(--scale));
+
+        }
+
+    }
+
+    h3{
+
+        @apply text-[1.7rem] font-medium ;
+
+    }
+    
+
+
 
     .information_text_home_initial {
 
@@ -46,19 +64,25 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
         @screen laptop {
 
-            @apply flex flex-col justify-evenly pl-[10rem];
+            @apply flex flex-col justify-start;
 
+            gap: calc(4rem * var(--scale));
+            padding-rigth: calc(10rem *var(--scale));
+            padding-left: calc(10rem *var(--scale));
 
         }
 
     }
 
     .btn_informati_initial {
-        @apply text-white text-[1.4rem] w-fit m-auto  h-auto flex justify-center items-center p-[1rem];
+        @apply text-white text-[1.4rem] w-fit m-auto  h-auto flex justify-center items-center px-[2.5rem] p-[1rem];
 
         @screen laptop {
 
-            @apply text-white text-[2.4rem] h-[6rem] w-[20rem];
+            @apply text-white font-semibold m-0 w-fit;
+
+            font-size: calc(2.4rem * var(--scale));
+            height: calc(6rem * var(--scale));
 
 
         }

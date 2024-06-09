@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 
 @import "./scale.css";
-@import "./components/iu/";
-@import "./components/organins/";
-@import "./components/molecules/";
-@import "./pages/";
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +31,7 @@ textarea {
 .main-page {
   animation-name: fadeIn;
   animation-duration: 0.6s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   background-image: var(--bg-img);
 }
 
@@ -106,5 +102,3 @@ h4 {
   background-color: #fc8405; /* Color del pulgar de la barra */
   border-radius: 5px; /* Radio de borde del pulgar de la barra */
 }
-
-

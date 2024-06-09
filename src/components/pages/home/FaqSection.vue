@@ -7,7 +7,7 @@ import AccordionTab from 'primevue/accordiontab';
 
 <template>
     <div class='FaqSection'>
-        <div class='faq-section'>
+        <div class='faq-section-container'>
             <h1>¿Alguna duda?</h1>
             <h2>Estamos para ayudarte</h2>
             <div class='accordion-container'>
@@ -79,9 +79,22 @@ import AccordionTab from 'primevue/accordiontab';
 
 }
 
-.faq-section {
+.faq-section-container {
 
     @apply flex flex-col gap-[2rem] justify-center items-center w-full;
+
+}
+
+h1{
+
+    @apply text-[2.5rem] font-bold ;
+
+}
+
+h2{
+
+    @apply text-[2rem]  ;
+
 
 }
 
@@ -93,9 +106,16 @@ import AccordionTab from 'primevue/accordiontab';
 
 .p-accordion {
 
-    @apply text-[2.4rem] font-semibold w-full;
+    @apply text-[1.5rem] font-semibold w-full;
+
+    @screen laptop{
+
+        @apply text-[2.4rem] font-semibold w-full;
+
+    }
 
 }
+
 
 /*.p-accordion-header{
 

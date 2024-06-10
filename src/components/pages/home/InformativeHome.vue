@@ -24,7 +24,7 @@ import ButtonsGlobal from '../../atoms/ButtonsGlobal.vue';
 
 <style scoped>
 .box_initial_Home_informati {
-    @apply pt-[9rem] flex bg-cover bg-no-repeat bg-[url("/components/molecules/fondoHome.jpg")];
+    @apply pt-[2rem] flex bg-cover bg-no-repeat bg-[url("/components/molecules/fondoHome.jpg")];
 
     @screen laptop {
 

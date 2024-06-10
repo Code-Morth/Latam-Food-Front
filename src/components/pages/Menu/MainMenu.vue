@@ -1,4 +1,20 @@
 <script    setup  >
+import { defineProps } from 'vue';
+
+// Define the props
+const props = defineProps({
+  selectMenu: {
+    type: Function,
+    required: true
+  },
+  menuSlc: {
+    type: String, 
+    required: true
+  }
+
+});
+
+
 
 </script>
 
@@ -14,11 +30,16 @@
         </div>
 
         <div class="box_menu_btns">
-            <button>Todos</button>
-            <button>Argentina</button>
-            <button>México</button>
-            <button>colombia</button>
-            <button>Bebidas</button>
+            <button 
+        @click="() => props.selectMenu('todos')" 
+        :class="{ 'btnst': props.menuSlc === 'todos' }"
+      >
+        Todos
+      </button>
+            <button @click="() => props.selectMenu('Argentina')" :class="{ 'btnst': props.menuSlc === 'Argentina' }">Argentina</button>
+            <button @click="() => props.selectMenu('Mexicó')" :class="{ 'btnst' : props.menuSlc === 'Mexicó'}">Mexicó</button>
+            <button @click="() => props.selectMenu('Colombia')" :class="{ 'btnst' : props.menuSlc === 'Colombia'}">Colombia</button>
+            <button @click="() => props.selectMenu('Bebidas')" :class="{'btnst' : props.menuSlc === 'Bebidas'}">Bebidas</button>
         </div>
 
     </div>
@@ -108,9 +129,12 @@
             padding-left: calc(2.2rem * var(--scale));
             padding-right: calc(2.2rem * var(--scale))
         }
+        
     }
  }
-
+ .btnst {
+    @apply bg-[#F78E1E] !text-[white] text-[1.2rem] font-bold  rounded-lg px-[.7rem] py-[.4rem];
+}
 
 }
 

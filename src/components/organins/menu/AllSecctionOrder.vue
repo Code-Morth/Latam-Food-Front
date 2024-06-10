@@ -1,6 +1,14 @@
 <script    setup>
 import CardsMenuTwo from '../../molecules/CardsMenuTwo.vue';
 
+const porps = defineProps({
+  selectMenu : {
+    type : String,
+    required : true
+  }
+})
+
+
 
 const platos = {
   "todos" : [
@@ -253,8 +261,9 @@ const platos = {
 }
 
 
+
  
-console.log("aqui mapeando",platos?.Argentina)
+
 
 </script>
 

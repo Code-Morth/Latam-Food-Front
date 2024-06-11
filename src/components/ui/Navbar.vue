@@ -25,7 +25,10 @@ const openModal = () => {
 <template>
   <ContainerGlobal>
     <div class="box_navbar-laptop">
-      <div class="logo_navbar"><img src="/LatamFoodLogo.svg" alt=""></div>
+      <div class="logo_navbar">
+        <p class='font-logo'>Latam</p>
+        <p class='font-logo'>Food</p>
+      </div>
       <nav class="container_section">
         <div class="navbar_link">
           <router-link to="/">Inicio</router-link>
@@ -50,16 +53,14 @@ const openModal = () => {
       </div>
       <Sidebar :showCloseIcon='false' v-model:visible="visibleTop" position="top" style="height: auto">
         <template #header>
-          <div class="flex w-full align-items-center gap-2 mt-[1rem]">
-            <div class="logo_navbar"><img class='logo-image-navbar' src="/LatamFoodLogo.svg" alt=""></div>
+          <div class="flex flex-col w-full justify-center align-items-center gap-2 mb-[0.5rem]">
+            <h1 class='font-logo'>Latam Food</h1>
             <div class="box_navbar-movile">
-              <nav class="container_section">
-                <div class="navbar_link">
-                  <router-link to="/">Inicio</router-link>
-                  <router-link to="/Menu">Menú</router-link>
-                  <router-link to="/Contacto">Contacto</router-link>
-                </div>
-              </nav>
+              <div class="navbar_link">
+                <router-link to="/">Inicio</router-link>
+                <router-link to="/Menu">Menú</router-link>
+                <router-link to="/Contacto">Contacto</router-link>
+              </div>
             </div>
           </div>
         </template>
@@ -117,6 +118,20 @@ const openModal = () => {
 
 }
 
+.font-logo {
+
+  @apply text-[#F78E1E] text-[4rem] text-center;
+
+  @screen laptop{
+
+    @apply h-[4rem];
+
+    font-size: calc(3.5rem * var(--scale));
+
+  }
+
+}
+
 .container_section {
   @apply flex w-full items-center justify-end gap-[3rem];
 
@@ -130,13 +145,14 @@ const openModal = () => {
 }
 
 .logo_navbar {
-  @apply font-extrabold w-full h-full m-auto flex justify-center items-center py-[1rem];
+  @apply font-extrabold w-full h-full  flex justify-center items-center py-[1rem];
 
   @screen laptop {
 
-    @apply justify-start;
+    @apply flex-col w-fit h-fit gap-0 justify-start items-center;
 
-    font-size: calc(4rem * var(--scale));
+    font-size: calc(3.5rem * var(--scale));
+    padding-bottom: calc(3rem * var(--scale));
   }
 }
 
@@ -147,7 +163,7 @@ const openModal = () => {
 }
 
 .navbar_link {
-  @apply flex flex-col w-auto text-[1.5rem] gap-[1.5rem] font-semibold;
+  @apply flex w-full justify-between items-center px-[2rem] text-[1.5rem] gap-[1.5rem] font-semibold;
 
   @screen laptop {
 
@@ -199,59 +215,59 @@ const openModal = () => {
 
   @apply flex flex-col justify-center gap-[2.5rem] items-center text-[black] h-full w-full mt-[3rem];
 
-  @screen laptop{
+  @screen laptop {
 
-    @apply min-w-[30rem] ;
-
-  }
-  
-}
-
-.top-buy-car{
-
-  @apply flex flex-col justify-center items-center gap-[2rem] pb-[3rem] border-b-[#2F695C] border-b-[0.1rem]  ;
-
-  h1{
-
-    @apply  text-[2rem] font-semibold text-center  ;
+    @apply min-w-[30rem];
 
   }
 
 }
 
-.button-seguir-comprando{
+.top-buy-car {
 
-  @apply text-[white] w-fit p-[1rem] h-auto text-[1.4rem] font-bold ;
+  @apply flex flex-col justify-center items-center gap-[2rem] pb-[3rem] border-b-[#2F695C] border-b-[0.1rem];
 
-}
+  h1 {
 
-.bot-buy-car{
-
-  @apply flex flex-col justify-center items-center gap-[2rem] ;
-
-  h1{
-
-    @apply text-[1.8rem] font-medium text-center ;
-
-  }
-
-  p{
-
-    @apply  text-[1.4rem] text-center ;
-
-  }
-
-  span{
-
-    @apply font-bold ;
+    @apply text-[2rem] font-semibold text-center;
 
   }
 
 }
 
-.p-sidebar{
+.button-seguir-comprando {
 
-  @apply bg-[red] ;
+  @apply text-[white] w-fit p-[1rem] h-auto text-[1.4rem] font-bold;
+
+}
+
+.bot-buy-car {
+
+  @apply flex flex-col justify-center items-center gap-[2rem];
+
+  h1 {
+
+    @apply text-[1.8rem] font-medium text-center;
+
+  }
+
+  p {
+
+    @apply text-[1.4rem] text-center;
+
+  }
+
+  span {
+
+    @apply font-bold;
+
+  }
+
+}
+
+.p-sidebar {
+
+  @apply bg-[red];
 
 }
 </style>

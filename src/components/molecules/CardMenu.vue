@@ -35,7 +35,7 @@ defineProps({
 
   @screen laptop {
 
-    @apply flex flex-col pb-[1rem] shadow-[0px_0px_5px_#524f4f] rounded-2xl;
+    @apply flex flex-col shadow-[0px_0px_5px_#524f4f] rounded-2xl;
 
     width: calc(30.6rem *var(--scale));
     height: auto;
@@ -65,6 +65,7 @@ defineProps({
 
       padding-left: calc(2rem *var(--scale));
       padding-rigth: calc(2rem *var(--scale));
+      gap: calc(1.5rem *var(--scale));
 
     }
 
@@ -75,7 +76,16 @@ defineProps({
   }
 
   p {
-    @apply text-[1.6rem] text-[#515151] leading-[1.92rem] font-normal;
+    @apply text-[#515151] font-normal;
+
+    @screen laptop{
+
+      font-size: calc(1.6rem *var(--scale));
+      line-height: calc(1.92rem *var(--scale));
+
+
+    }
+
   }
 
   .button-container {
@@ -125,6 +135,12 @@ defineProps({
   h3 {
 
     @apply text-[1.8rem] font-bold;
+
+    @screen laptop{
+
+      font-size:calc(1.8rem *var(--scale));
+
+    }
 
   }
 }

@@ -102,3 +102,26 @@ h4 {
   background-color: #fc8405; /* Color del pulgar de la barra */
   border-radius: 5px; /* Radio de borde del pulgar de la barra */
 }
+
+
+.p-sidebar{
+
+@screen laptop{
+
+  @apply min-w-[34rem] ;
+
+}
+
+.p-sidebar-content{
+
+  @apply hidden ;
+
+}
+
+.p-sidebar-header{
+
+  @apply py-[0.2rem] ;
+
+}
+
+}

@@ -101,7 +101,8 @@ const platos = [
 
       @apply  text-[white]  font-bold ;
 
-      font-size:calc(2.6rem *var(--scale));
+      padding:0;
+      font-size:calc(2.2rem *var(--scale));
       height:calc(6rem *var(--scale));
       width:calc(19rem *var(--scale));
 
